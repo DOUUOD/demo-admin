@@ -1,0 +1,18 @@
+spring:
+  datasource: #配置数据源
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://175.24.90.107:13306/demo_db?serverTimezone=Asia/Shanghai
+    type: com.alibaba.druid.pool.DruidDataSource
+  profiles:
+    active: dev #配置开发环境
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true #下划线转驼峰
+  mapper-locations: classpath*:mybatis/mapper/**/*.xml #mapper文件的路径
+server:
+  servlet:
+    context-path: / #配置上下文路径
+
+
